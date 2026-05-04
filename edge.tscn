@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://kq0wgjkntctw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ox2"]
-size = Vector2(1152, 20)
+[ext_resource type="Script" uid="uid://chevovmwvt1sk" path="res://edge.gd" id="1_fxce1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d2ox2"]
 
 [node name="Edge" type="StaticBody2D" unique_id=850904855]
+script = ExtResource("1_fxce1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1399471415]
-shape = SubResource("RectangleShape2D_d2ox2")
+shape = SubResource("WorldBoundaryShape2D_d2ox2")

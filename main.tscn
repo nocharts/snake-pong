@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://uybbqr3lg25b" path="res://paddle.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://kq0wgjkntctw" path="res://edge.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" path="res://snake.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://crjjii8sx7n7v" path="res://snake.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=685508582]
 
@@ -17,10 +17,11 @@ action_up = "p2_up"
 action_down = "p2_down"
 
 [node name="Top Edge" parent="." unique_id=850904855 instance=ExtResource("2_0xm2m")]
-position = Vector2(576, -10)
+position = Vector2(576, 0)
+rotation = 3.1415927
 
 [node name="Bottom Edge" parent="." unique_id=2121693951 instance=ExtResource("2_0xm2m")]
-position = Vector2(576, 658)
+position = Vector2(576, 648)
 
 [node name="Snake" parent="." unique_id=1802124421 instance=ExtResource("3_h2yge")]
 position = Vector2(564, 319)
