@@ -4,13 +4,13 @@ signal scored(side)
 
 var direction = Vector2(1, 1.5).normalized()  # starting diagonal direction
 var was_colliding = false
-var SPEED = 500.0
+var speed = 500.0
 
 func _draw():
 	draw_circle(Vector2.ZERO, 16, Color.GREEN)
 
 func _physics_process(delta: float) -> void:
-	velocity = direction*SPEED
+	velocity = direction*speed
 	
 	var collision_count = get_slide_collision_count()
 	
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 			var bounce_direction = collision.get_normal().rotated(angle)
 			
 			direction = bounce_direction.normalized()
-			SPEED += 10.0
+			speed += 10.0
 			
 		if collision.get_collider() is Edge:	
 			if not was_colliding:
@@ -61,6 +61,6 @@ func reset() -> void:
 	if randf() > 0.5:
 		direction.x *= -1
 
-	speed = 300
+	speed = 500
 	position.x = get_viewport().get_visible_rect().size.x / 2
 	position.y = get_viewport().get_visible_rect().size.y / 2	
