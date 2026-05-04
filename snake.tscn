@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://crjjii8sx7n7v"]
+
+[ext_resource type="Script" uid="uid://cjt02i6r1iojs" path="res://snake.gd" id="1_baghe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dm0k"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1802124421]
+script = ExtResource("1_baghe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2039786014]
+shape = SubResource("CircleShape2D_7dm0k")
