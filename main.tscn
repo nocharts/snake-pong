@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://cm65ttsyooviv"]
 
+[ext_resource type="Script" uid="uid://du5inybaun8n" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://uybbqr3lg25b" path="res://paddle.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://kq0wgjkntctw" path="res://edge.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://crjjii8sx7n7v" path="res://snake.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://jbae1rrysatg" path="res://scoreboard.tscn" id="5_lquwl"]
 
 [node name="Main" type="Node2D" unique_id=685508582]
+script = ExtResource("1_1bvp3")
 
 [node name="P1 Paddle" parent="." unique_id=949010608 instance=ExtResource("1_ig7tw")]
 position = Vector2(30, 324)
@@ -25,3 +28,10 @@ position = Vector2(576, 648)
 
 [node name="Snake" parent="." unique_id=1802124421 instance=ExtResource("3_h2yge")]
 position = Vector2(564, 319)
+
+[node name="Scoreboard" parent="." unique_id=235265814 instance=ExtResource("5_lquwl")]
+offset_left = 469.5
+offset_top = 30.0
+offset_right = 682.5
+offset_bottom = 53.0
+pivot_offset = Vector2(106.5, 0)
