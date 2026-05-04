@@ -1,9 +1,9 @@
 extends CharacterBody2D
-
+class_name Paddle
 
 @export var action_up: String = "ui_up"
 @export var action_down: String = "ui_down"
-const SPEED = 300.0
+const SPEED = 800.0
 
 
 func _physics_process(delta: float) -> void:	
